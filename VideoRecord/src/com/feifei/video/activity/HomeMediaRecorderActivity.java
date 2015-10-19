@@ -703,7 +703,7 @@ public class HomeMediaRecorderActivity extends BaseActivity implements
 				String progress = intent.getStringExtra("progress");
 				System.out.println("文件名："+fileName+"进度："+progress);
 				String msg = fileName+"---"+progress+"%";
-				//进度显示有问题。需要调整
+				//进度显示有问题。需要调整，显示所有同时进行的上传进度
 				if(progressList.size()==0){
 					progressList.add(msg);					
 				}else{
