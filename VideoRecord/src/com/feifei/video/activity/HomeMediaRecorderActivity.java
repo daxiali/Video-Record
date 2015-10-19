@@ -49,6 +49,7 @@ import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -102,7 +103,8 @@ public class HomeMediaRecorderActivity extends BaseActivity implements
 	
 	private Button start;// 开始录制按钮
 	private Button stop;// 停止录制按钮
-	private Button menu_back,menu_pause,menu_start,videoScale;
+	private Button menu_back,menu_pause,menu_start;
+	private ImageButton videoScale;
 	private TextView sdcardSizeText;//显示sdcard大小
 	private TextView videoTime;//显示视频时间
 	private ListView recordList;
@@ -229,7 +231,7 @@ public class HomeMediaRecorderActivity extends BaseActivity implements
 		menu_back = (Button)this.findViewById(R.id.menu_back);
 		menu_pause = (Button)this.findViewById(R.id.menu_pause);
 		menu_start = (Button)this.findViewById(R.id.menu_start);
-		videoScale = (Button)this.findViewById(R.id.videoScale);
+		videoScale = (ImageButton)this.findViewById(R.id.videoScale);
 		
 		sdcardSizeText = (TextView)this.findViewById(R.id.sdcardSizeText);
 		sdcardSizeText.setText("Free: "+CommonUtils.getSdcardFree(this)+"M");
@@ -289,13 +291,13 @@ public class HomeMediaRecorderActivity extends BaseActivity implements
 			/*FrameLayout.LayoutParams layoutParams;
 			layoutParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
 			surfaceview.setLayoutParams(layoutParams);*/
-			if(videoScale.getText().equals("+")){
+			/*if(videoScale.getText().equals("+")){
 				operationLiner.setVisibility(View.GONE);
 				videoScale.setText("-");				
 			}else{
 				operationLiner.setVisibility(View.VISIBLE);
 				videoScale.setText("+");	
-			}
+			}*/
 			break;
 		default:
 			break;

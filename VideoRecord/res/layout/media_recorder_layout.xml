@@ -15,23 +15,65 @@
             android:layout_height="fill_parent"
             android:layout_margin="10dp"
             android:background="@drawable/view_shape" />
-        <TextView 
+
+        <TextView
             android:id="@+id/videoTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:textColor="@color/white"
             android:layout_gravity="right"
-            android:text="00:00:00"
-            />
-        <Button 
-            android:id="@+id/videoScale"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:textColor="@color/white"
-            android:layout_gravity="bottom|right"
-            android:text="+"/>
+            android:text="00:00:00"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:background="@color/black"
+            android:layout_gravity="bottom|right" >
+
+            <ImageButton
+                android:id="@+id/videoScale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="bottom|right"
+                android:src="@drawable/rectmenuidi_hover"
+                android:textColor="@color/white" />
+            <ImageButton
+                android:id="@+id/videoScale1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                android:layout_gravity="bottom|right"
+                android:src="@drawable/rectmenuidi_hover"
+                android:textColor="@color/white" />
+            <ImageButton
+                android:id="@+id/videoScale2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                android:layout_gravity="bottom|right"
+                android:src="@drawable/rectmenuidi_hover"
+                android:textColor="@color/white" />
+            <ImageButton
+                android:id="@+id/videoScale3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                android:layout_gravity="bottom|right"
+                android:src="@drawable/rectmenuidi_hover"
+                android:textColor="@color/white" />
+             <ImageButton
+                android:id="@+id/videoScale4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                android:layout_gravity="bottom|right"
+                android:src="@drawable/rectmenuidi_hover"
+                android:textColor="@color/white" />
+        </LinearLayout>
     </FrameLayout>
 
     <LinearLayout
@@ -76,68 +118,70 @@
                 android:textColor="@color/black" />
         </LinearLayout>
 
-<!--         <ScrollView -->
-<!--             android:layout_width="match_parent" -->
-<!--             android:layout_height="match_parent" -->
-<!--             android:layout_weight="1" -->
-<!--             android:fadeScrollbars="true" > -->
+        <!-- <ScrollView -->
+        <!-- android:layout_width="match_parent" -->
+        <!-- android:layout_height="match_parent" -->
+        <!-- android:layout_weight="1" -->
+        <!-- android:fadeScrollbars="true" > -->
 
-            <LinearLayout
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/recordList"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:orientation="vertical" >
+                android:background="@drawable/button_shape" >
+            </ListView>
 
-                <ListView
-                    android:id="@+id/recordList"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/button_shape" >
-                </ListView>
+            <LinearLayout
+                android:id="@+id/menuLiner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="2"
+                android:background="@drawable/list_shape"
+                android:orientation="horizontal"
+                android:visibility="gone" >
 
-                <LinearLayout
-                    android:id="@+id/menuLiner"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="10dp"
-                    android:layout_weight="2"
-                    android:background="@drawable/list_shape"
-                    android:orientation="horizontal"
-                    android:visibility="gone" >
+                <Button
+                    android:id="@+id/menu_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_shape"
+                    android:text="Back" />
 
-                    <Button
-                        android:id="@+id/menu_back"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/button_shape"
-                        android:text="Back" />
+                <Button
+                    android:id="@+id/menu_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_shape"
+                    android:text="Delete"
+                    android:visibility="gone" />
 
-                    <Button
-                        android:id="@+id/menu_delete"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/button_shape"
-                        android:visibility="gone"
-                        android:text="Delete" />
-                    <Button
-                        android:id="@+id/menu_start"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/button_shape"
-                        android:visibility="gone"
-                        android:text="Start" />
-                    <Button
-                        android:id="@+id/menu_pause"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/button_shape"
-                        android:visibility="gone"
-                        android:text="Pause" />
-                </LinearLayout>
+                <Button
+                    android:id="@+id/menu_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_shape"
+                    android:text="Start"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/menu_pause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_shape"
+                    android:text="Pause"
+                    android:visibility="gone" />
             </LinearLayout>
-<!--         </ScrollView> -->
+        </LinearLayout>
+        <!-- </ScrollView> -->
     </LinearLayout>
 
 </LinearLayout>
