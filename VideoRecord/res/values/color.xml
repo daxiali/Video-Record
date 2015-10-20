@@ -18,5 +18,7 @@
 	<color name="transparent_black_80">#D000</color>
 	<color name="transparent_1f2021_80">#DD1f2021</color>
 	<color name="updateText">#2894e6</color>
+	<color name="bar">#2f3338</color>
+	<color name="menuSelectLine">#515358</color>
 
 </resources>
