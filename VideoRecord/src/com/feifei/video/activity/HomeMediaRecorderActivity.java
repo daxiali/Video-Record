@@ -104,7 +104,7 @@ public class HomeMediaRecorderActivity extends BaseActivity implements
 	private Button start;// 开始录制按钮
 	private Button stop;// 停止录制按钮
 	private Button menu_back,menu_pause,menu_start;
-	private ImageButton videoScale,uploadStatus,serverConfig,about,menu;
+	private ImageButton videoScale,uploadStatus,serverConfig,about;
 	private TextView sdcardSizeText;//显示sdcard大小
 	private TextView videoTime;//显示视频时间
 	private ListView recordList;
@@ -236,7 +236,6 @@ public class HomeMediaRecorderActivity extends BaseActivity implements
 		uploadStatus = (ImageButton)this.findViewById(R.id.uploadStatus);
 		serverConfig = (ImageButton)this.findViewById(R.id.serverConfig);
 		about = (ImageButton)this.findViewById(R.id.about);
-		menu = (ImageButton)this.findViewById(R.id.menu);
 		
 		
 		sdcardSizeText = (TextView)this.findViewById(R.id.sdcardSizeText);
@@ -310,8 +309,6 @@ public class HomeMediaRecorderActivity extends BaseActivity implements
 		case R.id.serverConfig:
 			break;
 		case R.id.about:
-			break;
-		case R.id.menu:
 			break;
 		default:
 			break;
